@@ -66,7 +66,9 @@ We use the following function for the task:
         plt.show()
 
 The output looks like this:
-<img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/sample_output.png" width="200">
+
+
+<img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/sample_output.png" width="400">
 
 The code with an example is available [here](https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/displayer.py).
 
