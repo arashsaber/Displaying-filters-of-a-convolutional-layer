@@ -1,5 +1,5 @@
 """
-Displaying the filters
+Displaying the filters of a convolutional layer
 Arash Saber Tehrani
 """
 
