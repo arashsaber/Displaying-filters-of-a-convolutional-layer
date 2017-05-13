@@ -5,11 +5,7 @@ We assume the NN model is developed by tflearn, which simplifies accessing the w
 
 We use the following function for the task:
 
-    import numpy as np
-    import tflearn
-    import matplotlib.pyplot as plt
-    #   ---------------------------------------
-    def filter_displayer(model, layer, padding=1):
+    def filter_displayer(model, layer, padding=1, normalize=True):
         """
         The function displays the filters of layer
         :param model: tflearn obj, DNN model of tflearn
@@ -24,7 +20,7 @@ We use the following function for the task:
         else:
             variable = layer.W
         filters = model.get_weights(variable)
-    
+        print(filters.shape)
         # n is the number of convolutions per filter
         n = filters.shape[2] * filters.shape[3]/2
         # Ensure the output image is rectangle with width twice as
@@ -32,6 +28,8 @@ We use the following function for the task:
         # and compute number of tiles per row (nc) and per column (nr)
         nr = int(np.ceil(np.sqrt(n)))
         nc = 2*nr
+        if nc*(nr-1) > n:
+            nr-=1
         # Assuming that the filters are square
         filter_size = filters.shape[0]
         # Size of the output image with padding
@@ -40,10 +38,11 @@ We use the following function for the task:
         # Initialize the output image
         filter_img = np.zeros((img_h, img_w))
     
-        # Normalize image to 0-1
-        fmin = filters.min()
-        fmax = filters.max()
-        filters = (filters - fmin) / (fmax - fmin)
+        if normalize:
+            # Normalize image to 0-1
+            fmin = filters.min()
+            fmax = filters.max()
+            filters = (filters - fmin) / (fmax - fmin)
     
         # Starting the tiles
         filter_x = 0
