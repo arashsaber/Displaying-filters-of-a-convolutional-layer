@@ -8,8 +8,8 @@ We use the following function for the task:
     import numpy as np
     import tflearn
     import matplotlib.pyplot as plt
-    
-        def filter_displayer(model, layer, padding=1):
+    #   ---------------------------------------
+    def filter_displayer(model, layer, padding=1):
         """
         The function displays the filters of layer
         :param model: tflearn obj, DNN model of tflearn
