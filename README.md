@@ -1,4 +1,4 @@
-# Displaying Filters of a layer
+# Displaying Filters of a convolutional layer
 We want to display the filters of convolutional layer as tiles beside each other in one photo. Such photos are quite helpful in understanding CNN's.
 
 We assume the NN model is developed by tflearn, which simplifies accessing the weights of each layer easy. The completer code can be found in
