@@ -20,7 +20,6 @@ We use the following function for the task:
         else:
             variable = layer.W
         filters = model.get_weights(variable)
-        print(filters.shape)
         # n is the number of convolutions per filter
         n = filters.shape[2] * filters.shape[3]/2
         # Ensure the output image is rectangle with width twice as
