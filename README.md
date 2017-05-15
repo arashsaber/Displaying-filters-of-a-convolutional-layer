@@ -65,9 +65,12 @@ We use the following function for the task:
 
 The output looks like this:
 
-
 <img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/sample_output.png" width="400">
 
+Note that, in case you want to visualize the filters of a convolutional layer and for example want to check the sparsity, make sure to use the absolute values. That is, change the line that reading the weights to
+
+    filters = abs(model.get_weights(variable))
+    
 The code with an example is available [here](https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/displayer.py).
 
         
