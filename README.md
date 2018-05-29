@@ -11,7 +11,7 @@ The output looks like this:
 
 <img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/Figs/layer1_filters.png" width="400">
 
-Recall that each convolutional kernel is a third degree tensor. SO to display all
+Recall that each convolutional kernel is a third degree tensor. To display all
 weights, we stack them in a column and show them all together. For example,
 the weights of a convolutional layer mapping 32 channels to 64 will be shown like this:
 
