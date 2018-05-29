@@ -23,6 +23,7 @@ def filter_displayer(model, layer, padding=1):
         variable = layer.W
     filters = model.get_weights(variable)
 
+    print(filters.shape[0], filters.shape[1], filters.shape[2], filters.shape[3])
     # n is the number of convolutions per filter
     n = filters.shape[2] * filters.shape[3]/2
     # Ensure the output image is rectangle with width twice as
@@ -110,8 +111,8 @@ if __name__ == '__main__':
     model = tflearn.DNN(net, tensorboard_dir='logs', tensorboard_verbose=3)
     #   ---------------------------------------
     model_name = 'DogCatClassifier-{}.model'.format(LR)
-    model.load(model_name+'.tflearn')
+    model.load('saved_models/'+model_name+'.tflearn')
 
-    filter_displayer(model, layer='conv1', padding=1)
+    filter_displayer(model, layer='conv2', padding=1)
 
 

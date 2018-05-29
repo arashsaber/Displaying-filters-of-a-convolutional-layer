@@ -9,7 +9,13 @@ To use, simply type:
 
 The output looks like this:
 
-<img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/sample_output.png" width="400">
+<img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/Figs/layer1_filters.png" width="400">
+
+Recall that each convolutional kernel is a third degree tensor. SO to display all
+weights, we stack them in a column and show them all together. For example,
+the weights of a convolutional layer mapping 32 channels to 64 will be shown like this:
+
+<img src="https://github.com/arashsaber/Displaying-filters-of-a-convolutional-layer/blob/master/Figs/layer2_filters.png" width="400">
 
 Note that, in case you want to visualize the filters of a convolutional layer and for example want to check the sparsity, make sure to use the absolute values. That is, change the line that reading the weights to
 
